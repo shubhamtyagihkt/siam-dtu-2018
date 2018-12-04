@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head><title>About | Team | SIAM DTU chapter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="../stylesheets/team.css">
+
+<link href='https://fonts.googleapis.com/css?family=Overpass:Semi-Bold' rel='stylesheet' type='text/css' />
+
+<!--FONTS-->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Sansita:Bold' rel='stylesheet' type='text/css' />
+<!--META-->
+<link rel="shortcut icon" href="../images/siamnewlogo.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src = "../javascripts/team.js"></script>
+<body>
+    <% include header.ejs %>
+    <div id="nav-fixer"></div>
+    <div id = "below">
+        <div id = "about-main" class = "block">
+            <div class = "head">
+                About SIAM
+            </div>
+            <div class = "content">
+                SIAM is a leading international organisation comprised of professionals and students whose primary interest is in mathematics and computational science and their applications.<br>
+                The community builds a learning environment for its member students and elite professors' panel.It aims to provide a common platform to the students to allow them to freely discuss,brainstorm and work on various aspects of mathematics .
+                SIAM DTU looks forward to involve students in the development of their mathematical prowess and widen their horizons to facilitate analytical thinking and enhance their reasoning powers.
+            </div>
+        </div>
+        <div class = "block container" id = "vivek">
+            <div class = "col-md-4" id = "vivek-pic">
+                <img class = "teacher" src = "../images/team/vivek.jpg" />
+            </div>
+            <div class = "col-md-8 vivektalk">
+                <div class = "head">
+                    Faculty advisor
+                </div>
+                <p class = "name-teacher">Dr. VIVEK AGGARWAL</p>
+                I am obliged to be a part of SIAM to encourage and guide the budding talent.
+                I would help them through my experience in this field and help the students to expand their knowledge and have a better grasp on practical aspects of learning and application. 
+            </div> 
+        </div>
+        <div class = "block" id = "us">
+            <div class = "head">Team</div>
+            <div class = "container mychoice">
+                <div class = "col-md-12 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">President</p>
+                        <img src = "../images/team/pulkitgaur.jpg" / class = "ourpics">
+                        <p class = "names">Pulkit Gaur<br>
+                        8860030631<br>
+                        pulkit@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+          <!--      <div class = "col-md-6 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Vice President</p>
+                        <img src = "../images/team/alternative.jpg" / class = "ourpics">
+                        <p class = "names">Shreya<br>
+                        xxxxxxxxxx<br>
+                        shreya@siamdtu.com
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-6 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Gen Sec</p>
+                        <img src = "../images/team/alternative.jpg" / class = "ourpics">
+                        <p class = "names">Priyanshu<br>
+                        xxxxxxxxxx<br>
+                        priyanshu@siamdtu.com
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-6 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Treasurer</p>
+                        <img src = "../images/team/alternative.jpg" / class = "ourpics">
+                        <p class = "names">Simran<br>
+                        xxxxxxxxxx<br>
+                        simran@siamdtu.com
+                        </p>
+                    </div>
+                </div>  -->
+                <hr>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Corporate Head</p>
+                        <img src = "../images/team/rohan.jpg"  class = "ourpics" />
+                        <p class = "names">Rohan<br>
+                        8447837002<br>
+                        rohan@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">IT Head</p>
+                        <img src = "../images/team/sudhanshu1.jpeg"  class = "ourpics" />
+                        <p class = "names">Sudhanshu<br>
+                        9716002577<br>
+                        sudhanshu@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Publicity Head</p>
+                        <img src = "../images/team/sharvi.JPG" class = "ourpics" />
+                        <p class = "names">Sharvi<br>
+                        7042113934<br>
+                        sharvi@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">PR Head</p>
+                        <img src = "../images/team/shakunt.jpg" class = "ourpics" />
+                        <p class = "names">Shakunt<br>
+                        9958499055<br>
+                        shakunt@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Content Head</p>
+                        <img src = "../images/team/nishtha.jpg" class = "ourpics" />
+                        <p class = "names">Nishtha<br>
+                        9811279448<br>
+                        nishtha@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Design Head</p>
+                        <img src = "../images/team/maitreyi.jpg" class = "ourpics" />
+                        <p class = "names">Maitreyi<br>
+                        9810023439<br>
+                        maitreyi@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Operations Head</p>
+                        <img src = "../images/team/manas.jpg"  class = "ourpics" />
+                        <p class = "names">Manas<br>
+                        9560859168<br>
+                        manas@siamdtu.in
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Logistics Head</p>
+                        <img src = "../images/team/pulkitp.jpeg" class = "ourpics" />
+                        <p class = "names">Pulkit Pasrija<br>
+                        9654706012<br>
+                        pulkitpasrija28@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Hospitality Head</p>
+                        <img src = "../images/team/uttu.JPEG" class = "ourpics" />
+                        <p class = "names">Uttkarsh<br>
+                        9953288222<br>
+                        uttkarsh.arora3@gmail.com
+                        </p>
+                    </div>
+                </div>
+         <!--       <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Treasurer</p>
+                        <img src = "../images/team/alternative.jpg" / class = "ourpics">
+                        <p class = "names">Simran<br>
+                        xxxxxxxxxx<br>
+                        simran@siamdtu.com
+                        </p>
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+    </div>
+    <% include footer.ejs %>
+</body>
+</html>

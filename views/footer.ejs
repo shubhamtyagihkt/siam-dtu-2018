@@ -1,0 +1,57 @@
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+    <div id = "footer" class = "container">
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Message/Feedback
+            </div>
+            <div class = "foot-block">
+                <form action = "javascript:handleClick();" style="margin-top:25px;">
+                    <div class="form-group footform">
+                        <input type="text" class="form-control footinput" id="feed-name" placeholder = "Name">
+                    </div>
+                    <div class="form-group footform">
+                        <input type="email" class="form-control footinput" id="feed-email" placeholder = "Email">
+                    </div>
+                    <div class="form-group footform">
+                        <input type="number" class="form-control footinput" id="feed-mobile" placeholder = "Phone">
+                    </div>
+                    <div class="form-group footform">
+                        <textarea class="form-control footinput" rows="4" id="feed-comment" placeholder = "Message"></textarea>
+                    </div>
+                    <div class = "form-group" style = "text-align : right;">
+                        <button class = "btn btn-default" id = "sub-feedback" onclick="$.handleClick()">Ping!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Reach us
+            </div>
+            <div class = "foot-block">
+                <div class = "foot-reach">
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">location_on</i><span class = "foot-ans">Applied Mathematics Department, DTU</span>
+                    </div>
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">call</i><span class = "foot-ans">8860030631</span>
+                    </div>
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">email</i><span class = "foot-ans">admin@siamdtu.in</span>
+                    </div>
+                </div>
+                <div class = "foot-map" id = "map-here"></div>
+            </div>
+        </div>
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Stay Updated
+            </div>
+            <div class = "foot-fb">
+                <iframe class = "fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdtusiam%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1065652813544477" width="340" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class = "follow-icons"><img src = "../images/twitter.png" class = "fo-icons" /><img src = "../images/linkedin.png" class = "fo-icons" /><img src = "../images/youtube.png" class = "fo-icons" /></div>
+        </div>
+    </div>
+    <script src="../javascripts/footer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATTRDUsu9wtdVYt3TUy3odioISjXKFxq4&callback=mapfunc" async defer></script>

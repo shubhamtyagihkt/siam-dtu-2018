@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<head><title>About | Team | SIAM DTU chapter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="../stylesheets/team.css">
+<link rel="stylesheet" href="../stylesheets/footer.css">
+<link href='https://fonts.googleapis.com/css?family=Overpass:Semi-Bold' rel='stylesheet' type='text/css' />
+
+<!--FONTS-->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Sansita:Bold' rel='stylesheet' type='text/css' />
+<!--META-->
+<link rel="shortcut icon" href="../images/siamnewlogo.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src = "../javascripts/team.js"></script>
+<body>
+    <%- include ../header.ejs %>
+    <div id = "below">
+        <div id = "about-main" class = "block">
+            <div class = "head">
+                About SIAM
+            </div>
+            <div class = "content">
+                SIAM is a leading international organisation comprised of professionals and students whose primary interest is in mathematics and computational science and their applications.<br>
+                The community builds a learning environment for its member students and elite professors' panel.It aims to provide a common platform to the students to allow them to freely discuss,brainstorm and work on various aspects of mathematics .
+                SIAM DTU looks forward to involve students in the development of their mathematical prowess and widen their horizons to facilitate analytical thinking and enhance their reasoning powers.
+            </div>
+        </div>
+        <div class = "block container" id = "vivek">
+            <div class = "col-md-4" id = "vivek-pic">
+                <img class = "teacher" src = "../images/team/vivek.jpg" />
+            </div>
+            <div class = "col-md-8 vivektalk">
+                <div class = "head">
+                    Faculty advisor
+                </div>
+                <p class = "name-teacher">Dr. VIVEK AGGARWAL</p>
+                I am obliged to be a part of SIAM to encourage and guide the budding talent.
+                I would help them through my experience in this field and help the students to expand their knowledge and have a better grasp on practical aspects of learning and application. 
+            </div> 
+        </div>
+        <div class = "block" id = "us">
+            <div class = "head">Team</div>
+            <div class = "container mychoice">
+                <div class = "col-md-12 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">President</p>
+                        <img src = "../images/team/pulkitgaur.jpg" / class = "ourpics">
+                        <p class = "names">Pulkit Gaur
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Corporate Head</p>
+                        <img src = "../images/team/rohan.jpg"  class = "ourpics" />
+                        <p class = "names">Rohan
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">IT Head</p>
+                        <img src = "../images/team/sudhanshu1.jpeg"  class = "ourpics" />
+                        <p class = "names">Sudhanshu
+                        </p>
+                    </div>
+                </div>
+				<div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">IT CoHead</p>
+                        <img src = "../images/team/shubham.jpg"  class = "ourpics" />
+                        <p class = "names">Shubham
+                        </p>
+                    </div>
+                </div>
+				<div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Corporate Head</p>
+                        <img src = "../images/team/rohan.jpg"  class = "ourpics" />
+                        <p class = "names">Rohan
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Publicity Head</p>
+                        <img src = "../images/team/sharvi.JPG" class = "ourpics" />
+                        <p class = "names">Sharvi
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">PR Head</p>
+                        <img src = "../images/team/shakunt.jpg" class = "ourpics" />
+                        <p class = "names">Shakunt
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Content Head</p>
+                        <img src = "../images/team/nishtha.jpg" class = "ourpics" />
+                        <p class = "names">Nishtha
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Design Head</p>
+                        <img src = "../images/team/maitreyi.jpg" class = "ourpics" />
+                        <p class = "names">Maitreyi
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Operations Head</p>
+                        <img src = "../images/team/manas.jpg"  class = "ourpics" />
+                        <p class = "names">Manas
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Logistics Head</p>
+                        <img src = "../images/team/pulkitp.jpeg" class = "ourpics" />
+                        <p class = "names">Pulkit Pasrija
+                        </p>
+                    </div>
+                </div>
+                <div class = "col-md-4 forpad">
+                    <div class = "each-box">
+                        <p class = "desig">Hospitality Head</p>
+                        <img src = "../images/team/uttu.JPEG" class = "ourpics" />
+                        <p class = "names">Uttkarsh
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "footer" class = "container">
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Message/Feedback
+                </div>
+                <div class = "foot-block">
+                    <form action = "javascript:handleClick();" style="margin-top:25px;">
+                        <div class="form-group footform">
+                            <input type="text" class="form-control footinput" id="feed-name" placeholder = "Name">
+                        </div>
+                        <div class="form-group footform">
+                            <input type="email" class="form-control footinput" id="feed-email" placeholder = "Email">
+                        </div>
+                        <div class="form-group footform">
+                            <input type="number" class="form-control footinput" id="feed-mobile" placeholder = "Phone">
+                        </div>
+                        <div class="form-group footform">
+                            <textarea class="form-control footinput" rows="4" id="feed-comment" placeholder = "Message"></textarea>
+                        </div>
+                        <div class = "form-group" style = "text-align : right;">
+                            <button class = "btn btn-default" id = "sub-feedback" onclick="$.handleClick()">Ping!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Reach us
+                </div>
+                <div class = "foot-block">
+                    <div class = "foot-reach">
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">location_on</i><span class = "foot-ans">Applied Mathematics Department, DTU</span>
+                        </div>
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">call</i><span class = "foot-ans">88XXXX30631</span>
+                        </div>
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">email</i><span class = "foot-ans">admin@siamdtu.in</span>
+                        </div>
+                    </div>
+                    <div class = "foot-map" id = "map-here"></div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Stay Updated
+                </div>
+                <div class = "foot-fb">
+                    <iframe class = "fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdtusiam%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1065652813544477" width="340" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class = "follow-icons"><img src = "../images/twitter.png" class = "fo-icons" /><img src = "../images/linkedin.png" class = "fo-icons" /><img src = "../images/youtube.png" class = "fo-icons" /></div>
+            </div>
+        </div>
+</body>
+<script src="../javascripts/footer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATTRDUsu9wtdVYt3TUy3odioISjXKFxq4&callback=mapfunc" async defer></script>
+</html>

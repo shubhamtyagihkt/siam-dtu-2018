@@ -1,0 +1,150 @@
+html{
+    margin-top : 0;
+}
+#header{
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+}
+#head{
+    width: 100%;
+    background-color: blueviolet;
+    color: azure;
+    text-align: left;
+    padding-right: 0px;
+}
+#tag-line{
+    text-align: center;
+    background-color: violet;
+    color: whitesmoke;
+    padding: 4px;
+    opacity: 0.7;
+    font-family: Montserrat;
+}
+#nav-fixer{
+    height: 80px !important;
+}
+#name{
+    display: flex;
+    vertical-align: middle;
+    padding: 0px;
+}
+#siam-logo{
+    width: 100px;
+}
+#menu-head{
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 0px;
+}
+.dropbtn {
+    background: none;
+    color: white;
+    padding: 25px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}  
+
+#login{
+    padding: 26px 10px 25px 10px;
+}
+
+#full-name{
+    font-size: 16px;
+    font-family: Montserrat;
+    padding-top: 30px;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: blueviolet;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: violet;
+    border-bottom-color: white;
+}
+.menu-name, .glyphicon-chevron-up{
+    color: cornsilk;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+.img-icons{
+    width: 35px;
+}
+#logo-home{
+    display: inline-block;
+}
+.nec{
+    display: inline-block;
+}
+@media screen and (max-width: 1380px){
+    #full-name{
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 710px){
+    #name{
+        display: flex;
+        width: 100%;
+    }
+    #menu-head{
+        display: flex;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 700px){
+    #tag-line{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 523px){
+    #tag-line h4{
+        font-size: 2.8vw;
+    }
+    .img-icons{
+        width: 6vw;
+    }
+}
+@media screen and (max-width: 470px){
+    .dropbtn{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 430px){
+    #siam-logo{
+        width: 26vw;
+    }
+    #full-name{
+        padding-top: 4vw;
+        font-size: 3vw;
+    }
+}

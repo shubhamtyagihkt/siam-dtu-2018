@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head><title>Mock Stocks | SIAM DTU chapter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../stylesheets/header.css">
+<link rel="stylesheet" href="../stylesheets/events.css">
+<link rel="stylesheet" href="../stylesheets/footer.css">
+<link href='https://fonts.googleapis.com/css?family=Overpass:Semi-Bold' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Sansita:Bold' rel='stylesheet' type='text/css' />
+<!--FONTS-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+<!--META-->
+<link rel="shortcut icon" href="../images/siamnewlogo.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+    body{
+        background: url("../images/mockstocks.jpg");
+    }
+    #pic-name{
+        background-color: rgba(58, 65, 69, 0.82);
+    }
+    #below-info{
+        background-color: rgba(115, 183, 229, 0.8);
+    }
+</style>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script type="text/javascript" src = "../javascripts/events.js"></script>
+</head>
+<body>
+    <div id = "header">
+    <div id = "head" class = "container">
+        <div id= "name" class = "col-md-6 col-xs-12">
+            <div id = "logo-box"><a id = "logo-home" href = "/"><img id = "siam-logo" src = "../images/siamnewlogo.png" /></a></div>
+            <div id = "full-name">
+                |Society For Industrial And Applied Mathematics - DTU Student Chapter|
+            </div>
+        </div>
+        <span id = "menu-head" class = "col-md-6 col-xs-12">
+            <a href = "/" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">Home</button>
+                </div>
+            </a><!--
+         -->
+                <div class="dropdown nec">
+                    <button class="dropbtn">
+                        Events
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/events/symposium">Symposium</a>
+                        <a href="/events/alumni">Alumnus-Students Session</a>
+                        <a href="/events/mockstocks">Mock Stocks</a>
+                        <a href="/events/fincricket">Financial Cricket</a>
+                        <a href="/events/absurd">Absurd Theory</a>
+                        <a href="/events/guess">Guess Estimates</a>
+                        <a href="/events/informal">Informal Events</a>
+                    </div>
+                </div>
+            <!--
+         --><a href = "/contest" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">Contest</button>
+                </div>
+            </a><!--
+         --><a href = "/about" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">About</button>
+                </div>
+            </a>
+            <a href = "#" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn" id = "login"><img class = "img-icons" src = "../images/google.png" /><span id ="loggedin">Sign In via Google</span></button>
+                </div>
+            </a>
+        </span>
+    </div>
+    <div id = "tag-line">
+        <h4>PROMOTING THE PRACTICE AND PROFESSION OF MATHEMATICS</h4>
+    </div>
+    </div>
+    <div id="nav-fixer"></div>
+    <div id = "below">
+        <div id = "all">
+            <div id = "pic-name" class = "container">
+                <div class = "picofevent">
+                    <div class = "needed">
+                        <img id = "picture" src = "../images/mockstocks.jpg" />
+                    </div>
+                </div>
+                <div class = "name-block">
+                    <h1 class = "name-event" id = "name-event">Mock Stocks</h1>
+                </div>
+            </div>
+            <div class = "container" id = "below-info">
+                <div class = "col-md-3" id = "left-block">
+                    <div class = "each-left">
+                        <div class = "head-each">
+                            Date
+                        </div>
+                        <div class = "content-each" id = "date-event">
+                            30<sup>th</sup> March 2017
+                        </div>
+                    </div>
+                    <div class = "each-left">
+                        <div class = "head-each">
+                            Time
+                        </div>
+                        <div class = "content-each" id = "time-event">
+                            12:00 PM - 04:00 PM
+                        </div>
+                    </div>
+                    <div class = "each-left">
+                        <div class = "head-each">
+                            Venue
+                        </div>
+                        <div class = "content-each" id = "venue-event">
+                            Coming soon
+                        </div>
+                    </div>
+                    <div class = "each-left">
+                        <div class = "head-each">
+                            Contact
+                        </div>
+                        <div class = "content-each" id = "venue-event">
+                            Uttkarsh Arora,
+                            9953288222<br>
+                            uttkarsh.arora3@gmail.com<br>
+                            Kushagra Samarth,
+                            9999926988<br>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-md-9" id = "description">
+                    <h2 class = "centered">Description</h2>
+                    <p id = "description-event">
+						“You must spend to make money”. – Plautus<br>
+
+                        On the Wall Street the Bulls and the Bears are in a constant struggle. No price is too low for a bear and too high for a bull.<br>
+
+                        Are you proactive enough to analyze the situation and respond accordingly? Do you want to invest in the stock market but are still wary of it? Here's a chance to test your financial acumen and assess your strategic depth, in a game, modelled on stock exchanges over the world, in association with BSE - the Bombay Stock Exchange! <br>
+
+                        MOCK STOCKS – A GAME OF LUCK, SKILL & STRATEGY, that will take you through the main moves of share transactions. The game captures the excitement of making money in a fast paced, action packed round of trading.<br>
+
+                        So, get ready to know what you own, and know why you own it. And let your stocks do the talking.<br>
+
+					</p>
+                    <h2 class = "centered">Prizes</h2>
+                    <p>
+                        Win total cash prizes of ₹10000.<br>
+                        Total prize pool worth ₹20000.
+                    </p>
+                    <h2 class = "centered">Rules</h2>
+                    <ol>
+                        COMING SOON
+                    </ol>
+                    <h2 class = "centered">Register yourself</h2>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfy2WorVteXlF8RZjPIfas2FYSPXCxDRSBJlnL2rdO3v_sKig/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "footer" class = "container">
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Message/Feedback
+                </div>
+                <div class = "foot-block">
+                    <form action = "javascript:handleClick();" style="margin-top:25px;">
+                        <div class="form-group footform">
+                            <input type="text" class="form-control footinput" id="feed-name" placeholder = "Name">
+                        </div>
+                        <div class="form-group footform">
+                            <input type="email" class="form-control footinput" id="feed-email" placeholder = "Email">
+                        </div>
+                        <div class="form-group footform">
+                            <input type="number" class="form-control footinput" id="feed-mobile" placeholder = "Phone">
+                        </div>
+                        <div class="form-group footform">
+                            <textarea class="form-control footinput" rows="4" id="feed-comment" placeholder = "Message"></textarea>
+                        </div>
+                        <div class = "form-group" style = "text-align : right;">
+                            <button class = "btn btn-default" id = "sub-feedback" onclick="$.handleClick()">Ping!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Reach us
+                </div>
+                <div class = "foot-block">
+                    <div class = "foot-reach">
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">location_on</i><span class = "foot-ans">Applied Mathematics Department, DTU</span>
+                        </div>
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">call</i><span class = "foot-ans">8860030631</span>
+                        </div>
+                        <div class = "foot-reach-field">
+                            <i class="material-icons">email</i><span class = "foot-ans">admin@siamdtu.in</span>
+                        </div>
+                    </div>
+                    <div class = "foot-map" id = "map-here"></div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "foot-heads">
+                    Stay Updated
+                </div>
+                <div class = "foot-fb">
+                    <iframe class = "fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdtusiam%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1065652813544477" width="340" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class = "follow-icons"><img src = "../images/twitter.png" class = "fo-icons" /><img src = "../images/linkedin.png" class = "fo-icons" /><img src = "../images/youtube.png" class = "fo-icons" /></div>
+            </div>
+        </div>
+</body>
+<script src="../javascripts/footer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATTRDUsu9wtdVYt3TUy3odioISjXKFxq4&callback=mapfunc" async defer></script>
+</html>

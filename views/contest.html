@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<head><title>Mathsomania | SIAM DTU chapter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../stylesheets/header.css">
+<link rel="stylesheet" href="../stylesheets/footer.css">
+<link href='https://fonts.googleapis.com/css?family=Overpass:Semi-Bold' rel='stylesheet' type='text/css' />
+
+<!--FONTS-->
+<link href='https://fonts.googleapis.com/css?family=Fira Sans Extra Condensed:Regular' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
+<!--META-->
+<link rel="shortcut icon" href="../images/siamnewlogo.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+    body{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #below{
+        padding-top: 107px;
+        text-align: center;
+    }
+    #question-score{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        background-color: #f5f8f9;
+    }
+    #for-pic{
+        background: url("../images/down5.jpg");
+    }
+    #quiz-head{
+        padding: 25px;
+        padding-top: 75px;
+        font-size: 38px;
+        border-bottom: 1px solid floralwhite;
+        background-color: rgba(43, 26, 24, 0.70);
+    }
+    #signin-message{
+        font-family: Muli, sans-serif;
+        font-size: 50px;
+        color: #0e4973;
+    }
+    #current-question{
+        font-family: Muli, sans-serif;
+        font-size: 50px;
+        color: #0e4973;
+    }
+    #options{
+        padding-left: 20px;
+        display: none;
+    }
+    #demo{
+        margin-top: 20px;
+    }
+    #prev-ques{
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 30px;
+        padding: 0px 10px;
+    }
+    .each-response{
+        text-align: left;
+        width: 100%;
+    }
+    .ques-line{
+        font-size: 20px;
+        color: #ca5c5c;
+        cursor: pointer;
+    }
+    .rightword, .yourword, .statusword, .scoreword{
+        font-size: 16px;
+        color : darkblue;
+    } 
+    #question{
+        font-size: 18px;
+    }
+    .tags{
+        color: lightseagreen;
+    }
+    .word-score{
+        font-size: 17px;
+    }
+    .score-num, .credits-num{
+        font-size: 25px;
+    }
+    #head-name{
+        font-size: 60px;
+        width: 100%;
+        font-family: Fira Sans Extra Condensed;
+        color: #efecf9;
+    }
+    #powered{
+        width: 100%;
+        font-size: 18px;
+        color: white;
+    }
+    #bg-mobi{
+        width: 100%;
+    }
+    #mobi-box{
+        width: 320px;
+        display: inline-block;
+    }
+    #mobi{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+    .symbols{
+        color: ghostwhite;
+    }
+    #new-block{
+        text-align: center;
+    }
+    #new-start{
+        background: none;
+        font-size: 20px;
+        padding: 16px;
+        transition: 300ms;
+        border: 2px solid maroon;
+    }
+    #buttonorline{
+        font-size: 22px;
+        color: #3f8e16;
+        font-family: muli, sans-serif;
+    }
+    #signed-out{
+        display: none;
+    }
+    #question-stats{
+        display: none;
+    }
+    #ans-submit{
+        font-size: 19px;
+    }
+    .error-line{
+        text-align: right;
+        color: crimson;
+        display: none;
+    }
+    .panel-body{
+        display: inline-block;
+        width: 80%;
+        text-align: left;
+    }
+    #new-start:hover{
+        background-color: rgb(23, 56, 65);
+        color: #f1fff9;
+    }
+    #leaders{
+        width: 100%;
+    }
+    #leaderboard{
+        width: 80%;
+        display: inline-block;
+    }
+    #leaderboard-head{
+        font-size: 40px;
+        font-family: muli;
+        text-align: left;
+    }
+    th{
+        text-align: center;
+    }
+    #rules{
+        width: 100%;
+        display: none;
+    }
+    #rules-inner{
+        width: 80%;
+        display: inline-block;
+        text-align: left;
+    }
+    #rules-head{
+        font-size: 30px;
+        font-family: muli;
+        color: #961717;
+    }
+    #inner-prizes{
+        width: 80%;
+        text-align: left;
+        display: inline-block;
+    }
+    #prize-head{
+        font-size: 34px;
+    }
+    .lil-head{
+        font-size: 30px;
+    }
+    #rules-on-click{
+        padding: 8px;
+        font-size: 20px;
+        color: #14635b;
+    }
+    #question-number{
+        font-family: muli, sans-serif;
+        font-size: 27px;
+        text-align: center;
+        color: #196c9b;
+    }
+    #redemption-rules{
+        width: 80%;
+        text-align: left;
+        display: inline-block;
+    }
+    #redeem-head{
+        font-size: 34px;
+        color: #368a20;
+    }
+    #show-rule{
+        padding: 10px;
+        display: block;
+    }
+    #leaderboard-buttons{
+        display: none;
+    }
+    #credits-change{
+        color: #257b9b;
+    }
+    #ques-image{
+        width: 100%;
+    }
+    #subjective-ans{
+        display: none;
+    }
+    #subjective-input{
+        padding: 9px;
+        font-family: muli;
+    }
+    @media screen and (max-width: 800px){
+        #question-score{
+            width: 100%;
+        }
+        #leaderboard{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 700px){
+        #quiz-head{
+            padding-top: 83px;
+        }
+    }
+    @media screen and (max-width: 663px){
+        #head-name{
+            font-size: 8vw;
+        }
+    }
+    @media screen and (max-width: 587px){
+        #prev-ques{
+            padding: 0px 2px;
+        }
+        .list-group-item{
+            padding: 10px 2px;
+        }
+    }
+    @media screen and (max-width: 500px){
+        #mobi-box{
+            width: 53vw;
+        }
+        .list-email{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 430px){
+        #question-stats{
+            padding: 0px;
+            width: 100%;
+        }
+        #rules-inner{
+            width: 100%;
+        }
+        #question-part{
+            padding: 0px 10px;
+        }
+        .ques-line{
+            max-height: 35px;
+            font-size: 3.3vw;
+            overflow: hidden;
+        }
+    }
+</style>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src = "../javascripts/contest.js"></script>
+</head>
+<body>
+    <div id = "header">
+    <div id = "head" class = "container">
+        <div id= "name" class = "col-md-6 col-xs-12">
+            <div id = "logo-box"><a id = "logo-home" href = "/"><img id = "siam-logo" src = "../images/siamnewlogo.png" /></a></div>
+            <div id = "full-name">
+                |Society For Industrial And Applied Mathematics - DTU Student Chapter|
+            </div>
+        </div>
+        <span id = "menu-head" class = "col-md-6 col-xs-12">
+            <a href = "/" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">Home</button>
+                </div>
+            </a><!--
+         -->
+                <div class="dropdown nec">
+                    <button class="dropbtn">
+                        Events
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/events/symposium">Symposium</a>
+                        <a href="/events/alumni">Alumnus-Students Session</a>
+                        <a href="/events/mockstocks">Mock Stocks</a>
+                        <a href="/events/fincricket">Financial Cricket</a>
+                        <a href="/events/absurd">Absurd Theory</a>
+                        <a href="/events/guess">Guess Estimates</a>
+                        <a href="/events/informal">Informal Events</a>
+                    </div>
+                </div>
+            <!--
+         --><a href = "/contest" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">Contest</button>
+                </div>
+            </a><!--
+         --><a href = "/about" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn">About</button>
+                </div>
+            </a>
+            <a href = "#" class = "nec">
+                <div class="dropdown">
+                    <button class="dropbtn" id = "login"><img class = "img-icons" src = "../images/google.png" /><span id ="loggedin">Sign In via Google</span></button>
+                </div>
+            </a>
+        </span>
+    </div>
+    <div id = "tag-line">
+        <h4>PROMOTING THE PRACTICE AND PROFESSION OF MATHEMATICS</h4>
+    </div>
+    </div>
+    <div id="nav-fixer"></div>
+    <div id = "below">
+        <div id = "for-pic">
+        <div id = "quiz-head">
+            <div id = "head-name"><span class = "symbols">-</span> Mathsomania <span class = "symbols">+</span></div>
+            <div id = "powered">Sponsored By</div>
+            <div id = "big-mobi">
+                <div id = "mobi-box"><img src = "../images/sponsors/mobikwiklogo.png" id = "mobi" /></div>
+            </div>
+        </div>
+        </div>
+        <div id = "question-score" class = "panel panel-default">
+            <div id = "signed-out">
+                <div id = "signin-message">Sign in to play!</div>
+            </div>
+            <div id = "rules">
+                <div id = "rules-inner">
+                    <div id = "rules-head">
+                        Rules/Instructions
+                    </div>
+                    <ol id = "rules-list">
+                        <li>You need to sign in first and then Cick Enter Quiz button to start the quiz.</li>
+                        <li>One question will be posted everyday at 7pm on the website till March 25.</li>
+                        <li>POINTS AND wik CREDITS will be added in the accounts of the participants who answer correctly.</li>
+                        <li>Be right and swift. The FIRST TWENTY CORRECT responses, get points on a rank based system. That is, the FIRST person to answer bags 30 points, SECOND: 29 points, THIRD: 28 points ... TWENTIETH:  11 points.</li>
+                        <li>All subsequent correct responses, gets 10 POINTS each.</li>
+                        <li>NO NEGATIVE MARKING. 0 points, for an incorrect response.</li>
+                        <li>Only one response will be recorded per participant per question.</li>
+                        <li>The participants can answer a question until the next question is posted. That is, you get 24 hours to solve a question.</li>
+                        <li>The result of the question of the day will be declared after the next question is posted.</li>
+                    </ol>
+                </div>
+                <div id = "inner-prizes">
+                    <div id = "prize-head">Prizes</div>
+                    <div class = "lil-head">Daily</div>
+                    <div class = "lil-content">
+                        The TOP TWENTY participants of the day will earn Mobikwik credits on a rank based system as mentioned above which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                    <div class = "lil-head">Weekly</div>
+                    <div class = "lil-content">
+                        The TOP TWO participants with the maximum points for the ongoing week gets Mobikwik credits worth Rs.100 which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                    <div class = "lil-head">Contest Winner</div>
+                    <div class = "lil-content">
+                        The TOP scorer of the month gets Mobikwik credits worth Rs.500 which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                </div>
+                <div id = "redemption-rules">
+                    <div id = "redeem-head">Redemption method</div>
+                    <div id = "redeem-content">
+                        <ol>
+                            <li>Your credits can directly be redeemed against the MobiKwik wallet addup vouchers.</li>
+                            <li>To redeem your credits just click on the Redeem button.</li>
+                            <li>Your credits will be redeemed to the nearest lower multiple of 20. Example: If you have have earned 70 credits and you decide to redeem your credits, 60 credits will be deducted from your credits and will be converted in vouchers. The 10 credits left will be there in your account only and you can grow them by answering more questions.</li>
+                            <li>You will recieve your voucher codes in 24 hrs after the redemption,  through an email to your registered email id.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div id = "show-rule">
+                <button class = "btn btn-default" id = "rules-click">Rules/Instructions and Prizes</button>
+            </div> 
+            <div class="panel-body" id = "question-stats">
+                <div id = "new-block">
+                    <button class = "btn btn-default" id = "new-start">Enter Quiz</button>
+                </div>
+                <div id = "question-part" class = "col-md-8">
+                    <div id = "current-question">Question of the day</div>
+                    <div id = "question-number">Question # : <span id = "number"></span>, Question credits : <span id = "credits"></span></div>
+                    <div id = "question">
+                        <span class = "tags">Question : </span>
+                        <span id = "question-now"></span>
+                        <div id = "ques-pic"><img id = "ques-image" src = "" /></div>
+                        <div id = "options">
+                        <!--    <div class="radio">
+                                <label><input id = "option1" type="radio" name="optradio" value = "1">Option 1</label>
+                            </div>
+                            <div class="radio">
+                                <label><input id = "option2" type="radio" name="optradio" value = "2">Option 2</label>
+                            </div>
+                            <div class="radio">
+                                <label><input id = "option3" type="radio" name="optradio" value = "3">Option 3</label>
+                            </div>
+                            <div class="radio">
+                                <label><input id = "option4" type="radio" name="optradio" value = "4">Option 4</label>
+                            </div>  -->
+                        </div>
+                        <div id = "subjective-ans"><input type = "number" id = "subjective-input" placeholder = "Answer here!"/></div>
+                    </div>
+                    <div id = "buttonorline" style = "text-align : right;"><button id ="ans-submit" class = "btn btn-default">Submit</button></div>
+                    <div class = "error-line">Error : <span id = "error-name">Some error to be shown</span></div>
+                </div>
+                <div class = "col-md-4">
+                    <h2>Score</h2>
+                    <div id = "score-short">
+                        <span class = "word-score">Score:</span><span class = "score-num"></span>
+                    </div>
+                    <div>
+                        <span class = "word-score">Your Credits:</span><span class = "credits-num"></span> <button id = "redeem" class = "btn btn-default">Redeem</button>
+                    </div>
+                    <div id = "credits-change"></div>
+                    <a href="#demo" class="btn btn-default" data-toggle="collapse">More</a>
+                    <div id="demo" class="collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">Questions attempted <span class="badge" id = "totalattempts"></span></li> 
+                            <li class="list-group-item">Right answers <span class="badge" id = "corrects"></span></li>
+                            <li class="list-group-item">Wong answers <span class="badge" id = "wrongs"></span></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div> 
+        </div><hr>
+        <div id = "leaders">
+        <div id = "leaderboard">
+            <div id = "leaderboard-head">Leaderboards</div>
+            <div id = "leaderboard-buttons">
+                <button id = "week-leaderboard" class = "btn btn-default lead-but">Weekly</button>
+                <button id = "alltime-leaderboard" class = "btn btn-default lead-but">All-Time</button>
+            </div>
+        </div>
+        </div>
+        <div id = "prev-ques">
+            <h1>Previous Questions and Score</h1>
+            <div id = "prev-ques">
+                <ul class = "list-group" id = "question-list">
+                <!--    <li class = "list-group-item">
+                        <div class = "each-ques">
+                            <div class = "ques-line">
+                                Day on 14 Dec 2099 ?
+                            </div>
+                            <div class = "each-response container">
+                                <div class="collapse">
+                                    <div class = "line1">
+                                        <div class = "col-md-6">
+                                            <span class = "rightword">Right answer: </span><span class = "right-ans">Monday</span>
+                                        </div>
+                                        <div class = "col-md-6">
+                                            <span class = "yourword">Your answer: </span><span class = "your-ans">Saturday</span>
+                                        </div>
+                                    </div>
+                                    <div class = "line2">
+                                        <div class = "col-md-6">
+                                            <span class = "statusword">Status: </span><span class = "status">Wrong</span>
+                                        </div>
+                                        <div class = "col-md-6">
+                                            <span class = "scoreword">Score: </span><span class = "score-this">-2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>   -->
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <div id = "footer" class = "container">
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Message/Feedback
+            </div>
+            <div class = "foot-block">
+                <form action = "javascript:handleClick();" style="margin-top:25px;">
+                    <div class="form-group footform">
+                        <input type="text" class="form-control footinput" id="feed-name" placeholder = "Name">
+                    </div>
+                    <div class="form-group footform">
+                        <input type="email" class="form-control footinput" id="feed-email" placeholder = "Email">
+                    </div>
+                    <div class="form-group footform">
+                        <input type="number" class="form-control footinput" id="feed-mobile" placeholder = "Phone">
+                    </div>
+                    <div class="form-group footform">
+                        <textarea class="form-control footinput" rows="4" id="feed-comment" placeholder = "Message"></textarea>
+                    </div>
+                    <div class = "form-group" style = "text-align : right;">
+                        <button class = "btn btn-default" id = "sub-feedback" onclick="$.handleClick()">Ping!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Reach us
+            </div>
+            <div class = "foot-block">
+                <div class = "foot-reach">
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">location_on</i><span class = "foot-ans">Applied Mathematics Department, DTU</span>
+                    </div>
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">call</i><span class = "foot-ans">8860030631</span>
+                    </div>
+                    <div class = "foot-reach-field">
+                        <i class="material-icons">email</i><span class = "foot-ans">admin@siamdtu.in</span>
+                    </div>
+                </div>
+                <div class = "foot-map" id = "map-here"></div>
+            </div>
+        </div>
+        <div class = "col-md-4">
+            <div class = "foot-heads">
+                Stay Updated
+            </div>
+            <div class = "foot-fb">
+                <iframe class = "fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdtusiam%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1065652813544477" width="340" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class = "follow-icons"><img src = "../images/twitter.png" class = "fo-icons" /><img src = "../images/linkedin.png" class = "fo-icons" /><img src = "../images/youtube.png" class = "fo-icons" /></div>
+        </div>
+    </div>
+    <!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+		
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+				    <div id = "rules-inner">
+                    <div id = "rules-head">
+                        Rules/Instructions
+                    </div>
+                    <ol id = "rules-list">
+                        <li>You need to sign in first and then Cick Enter Quiz button to start the quiz.</li>
+                        <li>One question will be posted everyday at 7pm on the website till March 25.</li>
+                        <li>POINTS AND wik CREDITS will be added in the accounts of the participants who answer correctly.</li>
+                        <li>Be right and swift. The FIRST TWENTY CORRECT responses, get points on a rank based system. That is, the FIRST person to answer bags 30 points, SECOND: 29 points, THIRD: 28 points ... TWENTIETH:  11 points.</li>
+                        <li>All subsequent correct responses, gets 10 POINTS each.</li>
+                        <li>NO NEGATIVE MARKING. 0 points, for an incorrect response.</li>
+                        <li>Only one response will be recorded per participant per question.</li>
+                        <li>The participants can answer a question until the next question is posted. That is, you get 24 hours to solve a question.</li>
+                        <li>The result of the question of the day will be declared after the next question is posted.</li>
+                    </ol>
+                </div>
+                <div id = "inner-prizes">
+                    <div id = "prize-head">Prizes</div>
+                    <div class = "lil-head">Daily</div>
+                    <div class = "lil-content">
+                        The TOP TWENTY participants of the day will earn Mobikwik credits on a rank based system as mentioned above which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                    <div class = "lil-head">Weekly</div>
+                    <div class = "lil-content">
+                        The TOP TWO participants with the maximum points for the ongoing week gets Mobikwik credits worth Rs.100 which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                    <div class = "lil-head">Contest Winner</div>
+                    <div class = "lil-content">
+                        The TOP scorer of the month gets Mobikwik credits worth Rs.500 which can be directly redeemed against the mobikwik add up vouchers.
+                    </div>
+                    <div id = "redemption-rules">
+                    <div id = "redeem-head">Redemption method</div>
+                    <div id = "redeem-content">
+                        <ol>
+                            <li>Your credits can directly be redeemed against the MobiKwik wallet addup vouchers.</li>
+                            <li>To redeem your credits just click on the Redeem button.</li>
+                            <li>Your credits will be redeemed to the nearest lower multiple of 20. Example: If you have have earned 70 credits and you decide to redeem your credits, 60 credits will be deducted from your credits and will be converted in vouchers. The 10 credits left will be there in your account only and you can grow them by answering more questions.</li>
+                            <li>You will recieve your voucher codes in 24 hrs after the redemption,  through an email to your registered email id.</li>
+                        </ol>
+                    </div>
+                </div>
+                </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Modal -->
+	<div class="modal fade" id="weekly-winner" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Rank</td>
+                                <td>Name</td>
+                                <td>Score</td>
+                                <td class = "list-email">Email Id</td>
+                            </tr>
+                        </thead>
+                        <tbody id = "leaderBoard">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+	<div class="modal fade" id="alltime-winner" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Rank</td>
+                                <td>Name</td>
+                                <td>Score</td>
+                                <td class = "list-email">Email Id</td>
+                            </tr>
+                        </thead>
+                        <tbody id = "monthlyLeaderBoard">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../javascripts/footer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATTRDUsu9wtdVYt3TUy3odioISjXKFxq4&callback=mapfunc" async defer></script>
+</html>

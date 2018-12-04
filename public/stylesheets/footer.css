@@ -1,0 +1,48 @@
+#footer.container{
+    width: 100%;
+    padding: 15px;
+    background-color: #252520;
+    font-family: Overpass;
+    color: beige;
+}
+.footform{
+    margin-bottom: 8px;   
+}
+.footinput{
+    border-radius: 0px;
+    font-size: 12px;
+    height: 34px;
+    padding: 2px 12px;
+}
+.foot-reach-field{
+    color: #e7d3c1;
+}
+.foot-heads{
+    font-size: 18px;
+    color: #77d9ab;
+}
+.foot-ans{
+    width: 100%;
+    padding-left: 4px;
+}
+.material-icons{
+    color: white;
+}
+.foot-fb{
+    height: 200px;
+    width: 100%;
+}
+#map-here{
+    width: 100%;
+    height: 220px;
+}
+.fb-frame{
+    width: 100%;
+}
+.foot-block{
+    max-width: 450px;
+}
+.fo-icons{
+    width: 40px;
+    margin: 10px;
+}

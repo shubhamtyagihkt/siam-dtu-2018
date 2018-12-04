@@ -1,0 +1,93 @@
+body{
+    background: url("../images/down6.jpg")
+}
+#below{
+    padding: 20px;
+    padding-top: 50px;
+    width: 100%;
+}
+.block{
+    box-shadow: 2px 5px 19px rgba(84, 86, 93, 0.81);
+    background-color:  rgba(149, 190, 186, 0.74);
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 3px;
+    display: none;
+}
+#about-main{
+    text-align: center;
+}
+.head{
+    font-family: Sansita;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.content{
+    padding: 0px 70px;
+    font-size: 19px;
+}
+.teacher{
+    width: 300px;
+}
+#vivek{
+    padding: 20px;
+}
+.name-teacher{
+    font-family: Montserrat;
+    font-size: 23px;
+}
+.names{
+    font-family: Montserrat;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 4px;
+}
+.each-box{
+    width: 260px;
+    display: inline-block;
+}
+.ourpics{
+    width: 260px;
+    height: 260px;
+}
+#us{
+    text-align: center;
+}
+.desig{
+    font-family: Montserrat;
+    font-size: 24px;
+}
+.forpad{
+    padding: 15px;
+}
+#vivek-pic{
+    text-align: center;
+}
+@media screen and (max-width: 800px){
+    .content{
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 500px){
+    .teacher{
+        width: 64vw;
+    }
+    #below{
+        padding: 4px;
+    }
+    .content{
+        padding: 0px 1px;
+    }
+}
+@media screen and (max-width: 430px){
+    .each-box{
+        width: 70vw;
+    }
+    .ourpics{
+        height: 70vw;
+        width: 70vw;
+    }
+}
